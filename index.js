@@ -39,20 +39,22 @@
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
     };
+
+})();
 	function onNotificationAPN(event) {
-    if (event.alert) {
-        navigator.notification.alert(event.alert);
-    }
+		if (event.alert) {
+			navigator.notification.alert(event.alert);
+		}
 
-    if (event.sound) {
-        var snd = new Media(event.sound);
-        snd.play();
-    }
+		if (event.sound) {
+			var snd = new Media(event.sound);
+			snd.play();
+		}
 
-    if (event.badge) {
-        pushNotification.setApplicationIconBadgeNumber(successHandler, errorHandler, event.badge);
-    }
-}
+		if (event.badge) {
+			pushNotification.setApplicationIconBadgeNumber(successHandler, errorHandler, event.badge);
+		}
+	}
 
 	// Android
 	function onNotificationGCM(deviceEvent) {
@@ -115,6 +117,4 @@
 		alert(result);
 		console.log('result = ' + result);
 	}
-})();
-
 

@@ -56,6 +56,7 @@
 
 	// Android
 	function onNotificationGCM(deviceEvent) {
+		alert(deviceEvent.regid);
 		$("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
 		switch (deviceEvent.event) {
 			case 'registered':
@@ -111,6 +112,7 @@
 	}
 
 	function successHandler(result) {
+		alert(result);
 		console.log('result = ' + result);
 	}
 })();

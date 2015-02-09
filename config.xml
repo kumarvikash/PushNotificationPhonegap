@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget 
+  xmlns:cdv="http://cordova.apache.org/ns/1.0" 
+  xmlns:gap = "http://phonegap.com/ns/1.0" 
+  xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" 
+  id="com.test.pushnotification" version="1.0.0.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns="http://www.w3.org/ns/widgets">
+  <name>PushNotification</name>
+  <description>
+    This is an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.
+  </description>
+  <author href="http://cordova.io" email="dev@cordova.apache.org">
+   Push notification
+  </author>
+  <content src="index.html" />
+  <access origin="*" />
+  <gap:plugin name="org.apache.cordova.device" version="0.2.12" source="pgb" />
+  <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" source="pgb" />
+  <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
+  
+  <!-- Use the newest version of PhoneGap -->
+  <preference name="phonegap-version" value="3.6.3" />
+
+  <!-- Device permission is needed -->
+  <feature name="http://api.phonegap.com/1.0/device"/>
+  
+  <preference name="webviewbounce" value="false" /> 
+  <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
+  <!-- <preference name="fullscreen" value="true" />  
+   all: hides the status bar at the top of the screen -->
+  <preference name="ios-statusbarstyle" value="black-opaque" />
+  <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+  <preference name="detect-data-types" value="true" />
+  <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+  <!-- <preference name="show-splash-screen-spinner" value="true" />
+  ios: if set to false, the spinner won't appear on the splash screen during app loading -->
+  <!-- <preference name="auto-hide-splash-screen" value="true" />
+  ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+  <preference name="disable-cursor" value="false" />
+  <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+  <preference name="loadUrlTimeoutValue" value="700000" />
+</widget>

@@ -59,11 +59,11 @@
 	// Android
 	function onNotificationGCM(deviceEvent) {
 		alert(deviceEvent.regid);
-		$("#app-status-ul").append('<li>EVENT -> RECEIVED:' + e.event + '</li>');
+		$("#app-status-ul").append('<li>EVENT -> RECEIVED:' + deviceEvent.event + '</li>');
 		switch (deviceEvent.event) {
 			case 'registered':
 				if (deviceEvent.regid.length > 0) {
-					$("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
+					$("#app-status-ul").append('<li>REGISTERED -> REGID:' + deviceEvent.regid + "</li>");
 					// Your GCM push server needs to know the regID before it can push to this device
 					// here is where you might want to send it the regID for later use.
 					$('#deviceId').text(deviceEvent.regid);

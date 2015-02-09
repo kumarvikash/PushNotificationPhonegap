@@ -68,6 +68,7 @@ function onNotificationGCM(deviceEvent) {
                 //$("#app-status-ul").append('<li>REGISTERED -> REGID:' + e.regid + "</li>");
                 // Your GCM push server needs to know the regID before it can push to this device
                 // here is where you might want to send it the regID for later use.
+				$('#deviceId').text(deviceEvent.regid);
                 console.log("regID = " + deviceEvent.regid);
             }
             break;

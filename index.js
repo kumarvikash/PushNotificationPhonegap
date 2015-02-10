@@ -68,6 +68,13 @@
 					// here is where you might want to send it the regID for later use.
 					$('#deviceId').text(deviceEvent.regid);
 					console.log("regID = " + deviceEvent.regid);
+					 $.ajax({
+						url: "http://10.115.50.71/IRMobile/Content/RegisterDevice?deviceId=" + deviceEvent.regid,
+					}).done(function () {
+						console.log("regID = " + deviceEvent.regid);
+					}).fail(function () {
+						alert("error");
+					});
 				}
 				break;
 
